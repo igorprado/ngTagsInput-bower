@@ -1,11 +1,11 @@
 /*!
- * ngTagsInput v3.0.0
+ * ngTagsInput v3.0.1
  * http://mbenford.github.io/ngTagsInput
  *
  * Copyright (c) 2013-2015 Michael Benford
  * License: MIT
  *
- * Generated at 2015-07-13 02:08:11 -0300
+ * Generated at 2015-08-11 22:02:24 -0300
  */
 (function() {
 'use strict';
@@ -361,7 +361,10 @@ tagsInput.directive('tagsInput', ["$timeout", "$document", "$window", "tagsInput
                         if (scope.disabled) {
                             return;
                         }
-                        input[0].focus();
+
+                        $timeout(function(){
+                          input[0].focus();
+                        });
                     }
                 },
                 tag: {
